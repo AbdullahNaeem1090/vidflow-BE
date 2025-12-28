@@ -1,6 +1,6 @@
 import { asyncHandler } from "../utils/asyncHandler.js";
 import { userModel } from "../Models/user.model.js";
-import { generateAccessAndRefereshTokens } from "../middlewares/auth.js";
+import { generateAccessAndRefereshTokens } from "../Middlewares/auth.js";
 import { formatViews, timeAgo } from "../utils/videoControllerHelper.js";
 import { videoModel } from "../Models/video.model.js";
 import { PlaylistModel } from "../Models/playlist.model.js";
