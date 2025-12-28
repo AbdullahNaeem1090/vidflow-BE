@@ -1,5 +1,5 @@
-import { likeModel } from "../Models/like.model";
-import { asyncHandler } from "../utils/asyncHandler";
+import { likeModel } from "../Models/like.model.js";
+import { asyncHandler } from "../utils/asyncHandler.js";
 
 export const toggleLike = asyncHandler(async (req, res) => {
   const { videoId } = req.body;
