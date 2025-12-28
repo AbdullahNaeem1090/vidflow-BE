@@ -5,7 +5,7 @@ import {
   isSubscribed,
   getSubscribedChannels
 } from "../Controllers/subscription.controller.js";
-import { auth } from "../middlewares/auth.js";
+import { auth } from "../Middlewares/auth.js";
 
 const SubscriptionRouter = express.Router();
 

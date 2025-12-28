@@ -1,6 +1,6 @@
 import express from "express";
 import { checkIfLiked, getLikeCount, toggleLike } from "../Controllers/like.controller.js";
-import { auth } from "../middlewares/auth.js";
+import { auth } from "../Middlewares/auth.js";
 
 const LikeRouter = express.Router();
 

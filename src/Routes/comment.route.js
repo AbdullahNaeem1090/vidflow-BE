@@ -1,7 +1,7 @@
 import express from "express";
 
 import { createComment, deleteComment, getVideoComments, updateComment } from "../Controllers/comment.controller.js";
-import { auth } from "../middlewares/auth.js";
+import { auth } from "../Middlewares/auth.js";
 
 const CommentRouter = express.Router();
 

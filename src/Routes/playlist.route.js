@@ -1,7 +1,7 @@
 import express from "express";
 
 import { createPlaylist, deletePlaylist, getPlaylist, getPlaylistVideos, getUserPlaylists, toggleVideoInPlaylist, updatePlaylist } from "../Controllers/playlist.controller.js";
-import { auth } from "../middlewares/auth.js";
+import { auth } from "../Middlewares/auth.js";
 
 const PlaylistRouter = express.Router();
 
