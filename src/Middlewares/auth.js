@@ -73,14 +73,14 @@ const auth = asyncHandler(async (req, res, next) => {
         } = await generateAccessAndRefereshTokens(user._id);
 
         res.cookie("accessToken", newAccessToken, {
-          httpOnly: true,
+          httpOnly: false,
           secure: true,
           sameSite: "None",
           maxAge: 3 * 24 * 60 * 60 * 1000,
         });
 
         res.cookie("refreshToken", newRefreshToken, {
-          httpOnly: true,
+          httpOnly: false,
           secure: true,
           sameSite: "None",
           maxAge: 7 * 24 * 60 * 60 * 1000,
