@@ -103,6 +103,7 @@ const userLogin = asyncHandler(async (req, res) => {
   return res.status(200).json({
     success: true,
     data: loggedInUser,
+    accessToken,
     message: "Login successful",
   });
 });
@@ -134,6 +135,7 @@ const check = asyncHandler(async (req, res) => {
   return res.status(200).json({
     message: "Verified",
     success: true,
+    accessToken: req.accessToken,
     data: req.user,
   });
 });

@@ -86,6 +86,8 @@ const auth = asyncHandler(async (req, res, next) => {
           maxAge: 7 * 24 * 60 * 60 * 1000,
         });
 
+        req.accessToken = newAccessToken;
+
         req.user = user;
         return next();
       } catch (refreshError) {
