@@ -86,6 +86,10 @@ const userLogin = asyncHandler(async (req, res) => {
     .findById(user._id)
     .select("-password -refreshToken -watchHisbtory -createdAt -updatedAt");
 
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+  res.setHeader('Pragma', 'no-cache');
+  res.setHeader('Expires', '0');
+
   res
     .cookie("accessToken", accessToken, {
       httpOnly: false,
