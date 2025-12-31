@@ -1,12 +1,13 @@
 import { watchHistoryModel } from "../Models/watchHistory.model.js";
 import { timeAgo } from "../utils/videoControllerHelper.js";
 
-export const formatDuration = (seconds) => {
-  const mins = Math.floor(seconds / 60);
-  const secs = seconds % 60;
+export const formatDuration = (seconds = 0) => {
+  const total = Math.max(0, Math.round(seconds));
+  const mins = Math.floor(total / 60);
+  const secs = total % 60;
+
   return `${mins}:${secs.toString().padStart(2, "0")}`;
 };
-
 
 export const addToWatchHistory = async (req, res) => {
   try {
